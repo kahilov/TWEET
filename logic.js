@@ -2,7 +2,7 @@ const Tweeter = function () {
     const posts = [
         {
             text: "First post!",
-            id: "p1",
+            id: "p0",
             comments: [
                 { id: "c1", text: "First comment on first post!" },
                 { id: "c2", text: "Second comment on first post!!" },
@@ -11,7 +11,7 @@ const Tweeter = function () {
         },
         {
             text: "Aw man, I wanted to be first",
-            id: "p2",
+            id: "p1",
             comments: [
                 { id: "c4", text: "Don't wory second poster, you'll be first one day." },
                 { id: "c5", text: "Yeah, believe in yourself!" },
@@ -19,7 +19,7 @@ const Tweeter = function () {
             ]
         }
     ]
-    let postIdCounter = posts.length
+    let postIdCounter = (posts.length-1) 
     let commentIdCounter = 0
     for (let i of posts) {
         let z = i.comments.length
@@ -68,10 +68,10 @@ const Tweeter = function () {
 
     return {
         getPosts: getPosts,
-        removeComment:removeComment,
-        addComment:addComment,
-        removePost:removePost,
-        newPost:newPost
+        removeComment: removeComment,
+        addComment: addComment,
+        removePost: removePost,
+        newPost: newPost
     }
 }
 
